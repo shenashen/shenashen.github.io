@@ -166,6 +166,7 @@ document.addEventListener('touchmove',function(event){
 });
 
 document.addEventListener('touchend',function(event){
+    event.preventDefault();
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
 
