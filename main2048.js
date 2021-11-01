@@ -166,7 +166,6 @@ document.addEventListener('touchmove',function(event){
 });
 
 document.addEventListener('touchend',function(event){
-    event.preventDefault();
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
 
@@ -178,6 +177,7 @@ document.addEventListener('touchend',function(event){
 
     //x
     if(Math.abs(deltax) >= Math.abs(deltay)){
+        event.preventDefault();
         if(deltax > 0){
             //move right
             event.preventDefault();
@@ -197,6 +197,7 @@ document.addEventListener('touchend',function(event){
     }
     //y
     else{
+        event.preventDefault();
         if(deltay > 0){
             event.preventDefault();
             //move down
