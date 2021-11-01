@@ -179,12 +179,14 @@ document.addEventListener('touchend',function(event){
     if(Math.abs(deltax) >= Math.abs(deltay)){
         if(deltax > 0){
             //move right
+            event.preventDefault();
             if(moveRight()){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
             }
         }
         else{
+            event.preventDefault();
             //move left
             if(moveLeft()){
                 setTimeout("generateOneNumber()",210);
@@ -195,6 +197,7 @@ document.addEventListener('touchend',function(event){
     //y
     else{
         if(deltay > 0){
+            event.preventDefault();
             //move down
             if(moveDown()){
                 setTimeout("generateOneNumber()",210);
@@ -202,6 +205,7 @@ document.addEventListener('touchend',function(event){
             }
         }
         else{
+            event.preventDefault();
             //move up
             if(moveUp()){
                 setTimeout("generateOneNumber()",210);
